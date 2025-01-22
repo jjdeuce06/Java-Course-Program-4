@@ -51,5 +51,33 @@ Buttons are sized accordingly
 Check if thethread is null
   -if it is, initialize thethread to a new thread and start the thread
 call the setx, sety, and repaint functions of the Obj object class
-  
+
+#### run()
+  while the runobj boolean is true
+    delay the thread for 1 millisecond, catch the InterruptedException error.
+    Check if Timepause is false, if it is, set start to true and delay the thread again with       the value from the speed scrollbar.
+    Call the move() function and the Obj.repaint() function
+
+
+#### stop()
+  set runObj to false, interrupt the thread, remove listeners, dispose window, and exit
+
+#### move method
+  Call the find max and min methods for the Obj object's x and y values.
+  Check if the object's next position is outside any of the values and reverse the direction     accordingly.
+  repaint() call at the end.
+
+#### adjustmentValueChanged
+  create integer named TS.
+  get the scrollbar that triggered the function
+  if it was the speed scrollbar, update the speed
+  if it was the object size scrollbar, update the obejct size 
+
+#### componentResized()
+  Get current width and height, set screen width and height accordingly using insets
+  Resize the object canvas and find new max and min values
+  get current x and y values, check if object is still on the screen and redraw if need be
+  recalculate and resize components with calls to MakeSheet() and SizeScreen()
+    
+    
 
