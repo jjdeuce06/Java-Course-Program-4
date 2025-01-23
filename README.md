@@ -78,6 +78,25 @@ call the setx, sety, and repaint functions of the Obj object class
   Resize the object canvas and find new max and min values
   get current x and y values, check if object is still on the screen and redraw if need be
   recalculate and resize components with calls to MakeSheet() and SizeScreen()
-    
+
+#### actionPerformed()
+  Get source from the buttons
+  if the Start button was clicked, change the label of the button accordingly and flip the timepause flag accordingly
+  if the Shape button was clicked, change the label and shape accordingly
+  if the Tail button was clicked, change the label and change the tail accordingly
+  if the Clear button was clicked, clear the object and repaint
+  if the Quit button was clicked, call stop()
+
+#### windowClosing
+  call the stop Method
+
+### Objc class
+  Declaration of variables including minimums/maximums for x and y and setting boolean flags
+
+#### getters and setters
+  getx and get y return the x and y values
+  setx and set y set the x and y values accordingly
+
+
     
 
